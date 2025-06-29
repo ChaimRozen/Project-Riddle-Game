@@ -6,3 +6,6 @@
 // ● Methods:
 // ○ recordTime(start, end)
 // ○ showStats() → Show total and average time.
+export class Player{
+
+}
