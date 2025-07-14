@@ -5,15 +5,14 @@ export default class Riddle{
         this.taskDescription = taskDescription;
         this.correctAnswer = correctAnswer;
     }
-    ask(ridAnswer){
-        let bool = false;
-        while (!bool){
+    ask(prompt){
+        let correct = false;
+        while (!correct){
             console.log(`Riddle name: ${this.name}`)
-            const getInput = require('prompt-sync')();
-            let userAnswer = getInput(this.taskDescription);
+            const userAnswer = prompt(this.taskDescription)
             if (this.correctAnswer == userAnswer){
                 console.log(`you right! the answer is ${this.correctAnswer}`);
-                bool = true;
+                correct = true;
             }
             else{
             console.log("wrong answer! try again! ");
